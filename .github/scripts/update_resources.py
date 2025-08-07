@@ -4,7 +4,7 @@ import csv
 import requests
 from urllib.parse import urlparse
 
-JSDELIVR_PREFIX = 'https://purge.jsdelivr.net/gh/AstralSightStudios/AstroBox-Repo@main/'
+JSDELIVR_PREFIX = 'https://purge.615873.xyz/gh/AstralSightStudios/AstroBox-Repo@main/'
 CDN_TARGETS = ['banner.json', 'devices.json5', 'index.csv']
 RESOURCES_DIR = 'resources'
 
@@ -18,7 +18,7 @@ def purge_jsdelivr(file_path):
         print(f"Error purging {url}: {e}")
 
 def purge_jsdelivr_custom(file_path, owner, repo):
-    url = f"https://purge.jsdelivr.net/gh/{owner}/{repo}@main/{file_path}"
+    url = f"https://purge.615873.xyz/gh/{owner}/{repo}@main/{file_path}"
     print(f"Purging {url}")
     try:
         resp = requests.get(url)
